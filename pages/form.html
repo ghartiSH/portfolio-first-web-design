@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Feedback </title>
+	<style type="text/css">
+		* {
+			margin:0px auto;
+		}
+		.mainbody{
+			height: 800px;
+			width: 100%;
+			background-color: ;
+			background-image: url(../images/hh.jpg);
+			background-size: cover;
+			float: left;
+			background-position: center;
+		}
+		.box{ /* box which contains the form */
+			height: 90%;
+			width: 50%;
+			background-color:black;
+			opacity: 0.5;
+			margin-top: 50px;
+		}
+		.p{ /* for the text contents in the form */
+			color: white;
+			padding-left: 12px;
+			font-size: 18px;
+			margin-top: 20px;
+			padding-right: 12px;
+		}
+		/* for the boxes and the texts */
+		input[type=text],textarea { 
+  			width: 100%;
+	  		padding: 12px;
+	  		border: 1px solid #ccc;
+	  		border-radius: 4px;
+	  		box-sizing: border-box;
+	  		margin-top: 6px;
+	  		margin-bottom: 16px;
+	  	}
+	  	input[type=submit] {
+			 background-color:grey;
+			 color: white;
+			 padding: 12px 20px;
+			 float: right;
+			 border-radius: 4px;
+			 cursor: pointer;
+			 margin-right: 50px;
+			 margin-bottom: 50px;
+			}
+		
+	</style>
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	
+	
+	<div class="header">
+		<p style="float: left;font-family: cursive;font-size: 50px;margin:10px; color: black" > BHARAT</p>
+			<div class="nav">
+				
+				<ul>
+					<li><a href="../index.html">HOME</a> </li>
+					<li> <a href="blog.html">BLOG</a></li>
+					<li> <a href="researches.html">RESEARCHES</a></li>
+					<li> <a href="cv.html">ABOUT ME</a></li>
+					<li> <a id="current" href="form.html">FEEDBACK</a></li>
+				</ul>
+			</div>
+		</div>
+	<div class="mainbody">
+		<div class="box">
+			<form name="feedbackForm" onsubmit="validateForm()">
+				<h1 style="text-align: center;padding-top: 10px; color: white;"> FeeedBack Form </h1>
+				<p class="p">First name: <input type="text" name="firstname" placeholder="Your First Name here"></p>
+				<p class="p">Last name: <input type="text" name="lastname" placeholder="Your Last Name here"></p>
+				<p class="p"> Email: <input type="text" name="email" placeholder="Your email"></p>
+				<p class="p">Feedback <br><textarea name="feedback" rows="10" cols="30" placeholder="Enter feedback"></textarea></p>
+				<p class="p"> <input type="submit" value="Send"> </p>
+			</form>
+		</div>
+		
+	</div>
+	<script src="../script/script.js"> /* linking external javascript */
+	</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Home Page</title>
+		<meta name="description" content="Portfolio of Bharat Gharti Magar" />
+		<meta name="keywords" content="HTML,CSS,JavaScript" />
+		<meta name="author" content="Bharat Gharti Magar" />
+		
+	<style type="text/css">
+		*{
+			margin: 0px auto;
+		 }
+		 .text{ /* text styles for the divisions/ explanations of other pages */
+		 	
+		 	font-family: sans-serif;
+		 	color: white;
+		 	padding: 12px 20px;
+		 	line-height: 1.5;
+
+		 }
+		 .imgslide{ /* size of the slide show images */
+		 	width: 100%;
+		 	height: 100%;
+		 }
+		 .imagecontainer{ /* css for the division where slideshow occurs */
+		 	width: 100%;
+		 	height: 70%;
+		 	margin: 40px auto;
+		 	background-color: black; 
+		 	opacity: 0.6;
+		 	box-shadow: 5px 5px 10px black; 
+		 	float: right;
+		 	overflow: hidden;
+		 }
+
+	</style>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="css/style.css"> <!--linking external css-->
+	<div class="main"> <!-- main division-->
+		<div class="header">
+			<p style="float: left;font-family: cursive;font-size: 50px;margin:10px;" > BHARAT</p> <!--inline css for the webpage name/logo -->
+			<div class="nav">
+				<ul>
+					<li><a id="current" href="index.html">HOME</a> </li>
+					<li> <a href="pages/blog.html">BLOG</a></li>
+					<li> <a href="pages/researches.html">RESEARCHES</a></li>
+					<li> <a href="pages/cv.html">ABOUT ME</a></li>
+					<li> <a href="pages/form.html">FEEDBACK</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="height: 1800px;background: url(images/back.jpg);background-size:cover;background-position: center;"> <!-- inline css for the body part of the home page -->
+			<div style="height: 600px;float: left; margin-left: 150px; width: 80%;"> <!-- slide showing division-->
+				<div class="imagecontainer" id="img">
+					<img src="images/a.jpg" class="imgslide">
+				</div>
+			</div>
+			<!-- divisions for the brief descriptions of other pages-->
+			<div class="container" style="">
+				<img src="images/blog.png" class="images" style="float: right;">
+				<h1 class="text"> BLOGS </h1>
+				<p class="text"> A blog (shortening of “weblog”) is an online journal or informational website displaying information in the reverse chronological order, with the latest posts appearing first. It is a platform where a writer or even a group of writers share their views on an individual subject.
+				<br>.<br>.<br> <a href="pages/blog.html" class="text"> Explore more </a>
+				</p>
+			</div>
+			<div class="container" style="float: right;">
+				<img src="images/resss.png" class="images" style="float: left;">
+				<h1 class="text"> RESEARCHES </h1>
+				<p class="text"> It is difficult for a beginner like me to get started with the css. I would not have done it without the references of some best websites out there 
+				in the internet. Here are some of the reference sites and their comparision to mine.<br>.<br>.<br>.
+				 <a href="pages/researches.html" class="text"> Explore more </a>  
+				</p>
+			</div>
+			<div class="container" style="">
+				<img src="images/me.png" class="images" style="float:right;">
+				<h1 class="text"> CV </h1>
+				<p class="text"> A CV (short for the Latin phrase curriculum vitae, which means “course of life”) is a detailed document highlighting your professional and academic history. CVs typically include information like work experience, achievements and awards, scholarships or grants you’ve earned, coursework, research projects and publications of your work. <br>.<br>.<br>
+				<a href="pages/cv.html" class="text"> Click here to know about me</a>
+				</p>
+			</div>
+			<div class="container" style="float: right;">
+				<img src="images/fe.png" class="images" style="float:left;">
+				<h1 class="text"> FEEDBACK </h1>
+				<P class="text">How do you like my website? Any things I need to work on? I'm always open for the suggestions.<br>.<br>.<br>.<br> <a href="pages/form.html" class="text">
+					Click here for suggestions.
+				</a>
+				</P>
+			</div>
+			
+		</div>
+		<div class="footer"> <!-- footer-->
+			<div id="logo" >
+				<a href="https://www.facebook.com/ghartiiiiii.bharat"><img id="icon" src="images/fb.png" title="Facebook"></a>
+			</div>
+			<div id="logo">
+				<a href="https://www.instagram.com/ghartiii"><img id="icon" src="images/igg.png" title="Instagram"></a>
+			</div>
+			<div id="logo"> 
+				<a href="https://www.gmail.com"><img id="icon" src="images/gmm.png" title="Gmail"></a>
+			</div>
+		</div>
+		
+	</div>
+	<!-- function for the slide show-->
+	<script>
+
+    	var images = ['a.jpg', 'b.jpg', 'c.jpg','d.jpg','e.jpg'];
+
+    	var x = 0;
+
+    	var imgs = document.getElementById('img');
+
+    	setInterval(slider, 3000);
+
+
+    	function slider() {
+
+     		if (x < images.length) {
+        		x = x + 1;
+      		} else {
+       			 x = 1;
+      			}
+
+
+      		imgs.innerHTML = "<img src=" +"images/"+ images[x - 1] + ">";
+
+
+    	}
+
+
+  </script>
+	
+</body>
+</html>

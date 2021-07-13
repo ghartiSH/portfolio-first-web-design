@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Blogs </title>
+	<style type="text/css">
+		* {
+			margin:0px auto;
+		}
+		.mainbody{ /* for the page */
+			height: 720px;
+			width: 100%;
+			background-color:#ADBBBB ;
+			background-image:url(../images/hh.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+		.verticalnav{ /* division for the buttons*/
+			width:20%;
+			height: 696px;
+			background-color: black;
+			opacity: 0.5;
+			padding: 12px 20px;
+			line-height: 50px;
+			float: left;
+		}
+		.explanations{ /* css for text styling the contents */
+			color: white;
+			display: none; /* hidden which display on button click */
+			line-height: 1.5;
+			padding: 12px 20px;
+			font-size: 24px;
+			font-family:sans-serif;
+			margin-left: 10px;
+		}
+		button{ /* css fot the buttons */
+			width:250px;
+			height: 50px;
+			font-size: 24px;
+			border-radius: 10px;
+			margin: 20px;
+			cursor: pointer;
+
+		}
+		.expbox{ /* divions which hold the contents */
+			width:75%;
+			height: 720px;
+			background-color: black;
+			opacity: 0.5;
+			color: white;
+			float: right;
+			margin-right:20px;
+
+		}
+		h1{
+			font-size: 50px;
+			font-family:sans-serif;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<div class="header">
+		<p style="float: left;font-family: cursive;font-size: 50px;margin:10px;" > BHARAT</p>
+			<div class="nav">
+				
+				<ul>
+					<li><a href="../index.html">HOME</a> </li>
+					<li> <a id="current" href="blog.html">BLOG</a></li>
+					<li> <a href="researches.html">RESEARCHES</a></li>
+					<li> <a href="cv.html">ABOUT ME</a></li>
+					<li> <a href="form.html">FEEDBACK</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mainbody">
+			<div class="verticalnav">
+				<button onclick="showabout()"> Introduction </button>
+				<button onclick="showposimp()"> Positive Impacts </button>
+				<button onclick="shownegimp()"> Negative Impacts </button>
+				<button onclick="showconcl()"> Conclusion </button>
+
+			</div>
+			<div class="expbox">
+				<!-- id is given to all the division for javascript references-->
+				<section  class="explanations" id="about" style="display: block"> <!-- to be shown when the page is loaded -->
+					<h1> Introduction </h1>
+					<p> Internet can be taken as the latest discovery of man which has revolutionised his style of working and living. It has
+						totally reduced the distance, broken all man-made barriers and and made our world a small place. It has brought ocean of 
+						information just at our doorstep opening before us right at a click of a button.<br>
+						Internet basically is the global connection of networks. Today every nook and corner of the world is connected through the internet.
+						Before, one had to posses a telephone line and a modem to connect to the internet but things have changed this days. Wireless technology 
+						has taken over the internet technology worldwide. Once someone is connected to the internet, he can communicate, get entertained, surf information, buy/sell things, perform transactions, do businesses and much more. We have already stepped into the digital world and internet is to be credited for it. Without
+						internet, it would not have been possible.<br> However, when not used properly internet can also be disadvantageous to someone in many ways.
+					</p>
+
+				</section>
+				<section class="explanations" id="posimp">
+					<p>
+						There are countless number positive aspects of internet, where instant communication, access to vast ocean of knowledge, e-commerce, e-banking, entertainment 
+						etc are some of them. Unlike previous days, one need not go home to home delivering letters or dail phone number and wait minutes to get connected over the internet. Communicating to someone has become as easier as a single click in our smartphones through social medias and the internet. Besides communication, internet also serves as the "information superhighway" which provides us access to any kind of information. We have already left our books behind and stepped into the new era of 'Google' for learning.<br>
+						Similarly, buying and selling goods without having to leave the room is also made possible by the internet. All thanks to the internet, that we do no have to stand in a line for hours to buy any goods or pay bills. Internet has also widened business opportunities. We can simply advertise our products and seek for jobs, manage international business conferences, buy/exchange currencies etc through the internet.<br>
+						Finally, just sitting on one chair for hours and not getting bored is also made possible by the internt. It is the ultimate source of entertainment for prople of our generation. Online games, Online videos, social medias are some of the entertainment services provided by the internet.
+
+					</p>
+				</section>
+				<section class="explanations" id="negimp">
+					<p>
+						Although, Internet immensely helps any man in his day-to-day transactions, yet it is a tool that is often misused. Today thousands of youth are getting hooked to the internet watching things which are not meant for them. "Pornography" is ruining the youths. Similarly, people of our generations are knowingly or unknowingly addicted to many social medias and online games which is a great threat to their career.<br>
+						With the advancement in internet, internet hackers, illegal piracies, spreading computer viruses have also been common. With people sharing information on the internet, stalkers may experience less difficulty finding personal information about others through various means.<br>
+						 Out of all, spending too much time on the computer/smartphones surfing the internet or playing games can also lead to obesity and unhealthy lifestyle.
+					</p> 
+				</section>
+				<section class="explanations" id="concl">
+					<p>
+						Internet is a great tool which  man has invented. Its potential  is still not fully tapped. More and More uses of internet are being discovered as days go by.
+						It has made our life easy, comfortable, pleasurable and luxurious. Internet has ushered in the cyber age. However, it is high time that its wrong use and negative impact be minimised. If not put an end to, it will strangle our young generation and lead them to moral abyss.
+					</p>
+				</section>
+
+
+
+			</div>
+		</div>
+		<script >
+			/* funtions for all the buttons */
+			function showabout(){
+				document.getElementById('about').style.display="block"
+				document.getElementById('posimp').style.display="none"
+				document.getElementById('negimp').style.display="none"
+				document.getElementById('concl').style.display="none"
+
+			}
+			function showposimp(){
+				document.getElementById('about').style.display="none"
+				document.getElementById('posimp').style.display="block"
+				document.getElementById('negimp').style.display="none"
+				document.getElementById('concl').style.display="none"
+
+
+			}
+			function shownegimp(){
+				document.getElementById('about').style.display="none"
+				document.getElementById('posimp').style.display="none"
+				document.getElementById('negimp').style.display="block"
+				document.getElementById('concl').style.display="none"
+
+
+			}
+		
+			function showconcl(){
+				document.getElementById('about').style.display="none"
+				document.getElementById('posimp').style.display="none"
+				document.getElementById('negimp').style.display="none"
+				document.getElementById('concl').style.display="block"
+
+			}
+		</script>
+</body>
+</html>
